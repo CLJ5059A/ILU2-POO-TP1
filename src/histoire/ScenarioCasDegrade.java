@@ -11,8 +11,10 @@ public class ScenarioCasDegrade {
 		etal.libererEtal();
 		System.out.println("Fin du test 1");
 		try {
-			etal.acheterProduit(0,acheteur);
-		} catch(Exception e) {
+			etal.acheterProduit(1,acheteur);
+		} catch(IllegalArgumentException e) {
+			e.printStackTrace();
+		} catch (IllegalStateException e) {
 			e.printStackTrace();
 		}
 		System.out.println("Fin test 2");
